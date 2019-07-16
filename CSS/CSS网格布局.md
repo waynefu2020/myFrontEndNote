@@ -1,12 +1,19 @@
+# CSS网格布局（CSS Grid）
+
+网格通常具有列（column），行（row），以及在每行和列之间的间隙——通常称为沟槽（gutter）。
+
+![flexterms](grid.png "flex模型")
+
 它通过把 HTML 元素转换为具有行和列的网格容器，以便将子元素放置在所需要的位置。
 
-**创建CSS网格**
+## 创建简单的网格框架
+
 将display的指设置为grid即可。
 
 注意：
 在 CSS 网格中，父元素称为容器（container），它的子元素称为项（items）。
 
-**使用 grid-template-columns/rows 添加多列/行**
+## 使用 grid-template-columns/rows 添加多列/行
 
 属性值的个数表示网格的列数，而每个值表示对应列的宽度
 
