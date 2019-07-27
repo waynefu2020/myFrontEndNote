@@ -118,4 +118,3 @@ radData.toUpperCase();
 browserType.replace('moz','van');
 //"vanilla"
 ```
-
