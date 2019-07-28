@@ -90,6 +90,20 @@ if (choice === 'sunny' && temperature < 86) {
 // 只有当choice === 'sunny'和temperature < 86返回true时，代码才能运行
 ```
 
+注意：**在条件语句中，不能多次给同一个变量赋值。以下代码为错误示范：**
+
+```js
+if (x === 5 || 7 || 10 || 20) {
+  // run my code
+}
+```
+正确的写法如下：
+
+```js
+if (x === 5 || x === 7 || x === 10 || x === 20) {
+  // run my code
+}
+
 ## switch语句
 
 多个`if...else`连在一起使用的时候，可以转换为更方便的`switch`结构。
@@ -123,4 +137,8 @@ switch (fruit) {
 // 如果'condition'为true，则返回expression1，否则返回expression2
 ```
 
- 
+下面的代码中，如果`n`能被2整除，那么`even`就为`true`，否则就是`false`
+
+```js
+var even = (n % 2 === 0) ? true : false;
+```

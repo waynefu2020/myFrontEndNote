@@ -90,4 +90,3 @@ myArray.push('Cardiff');
 如果要删除最后一个元素，可以用`myArray.pop();`
 
 `unshift()`和`shift()`作用和前面两个方法相同，不过作用于数组的开头。
-
