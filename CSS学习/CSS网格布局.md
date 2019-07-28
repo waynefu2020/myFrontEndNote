@@ -8,9 +8,9 @@
 
 ## 创建简单的网格框架
 
-将display的指设置为grid即可。
+**方法：** 将display的指设置为grid即可。
 
-注意：
+**注意：**
 在 CSS 网格中，父元素称为容器（container），它的子元素称为项（items）。
 
 ## 使用 grid-template-columns/rows 添加多列/行
@@ -24,6 +24,7 @@
 }
 /*创建两个宽度为50px的列*/
 ```
+
 **grid-gap 更快地添加间距**
 
 如果grid-gap有一个值，行与行之间和列与列之间将添加等于该值的间隙。
