@@ -108,7 +108,31 @@ var a = [1, , 1];
 a.length // 3
 ```
 
+数组的空位可以读取，返回`undefined`。
 
+数组的空位和`undefined`是不一样的，如果是空位，使用数组的`forEach`方法、`for...in`结构、以及`Object.keys`方法进行遍历，空位都会被跳过。
+
+```js
+var a = [, , ,];
+
+a.forEach(function(x, i)) {
+  console.log(i + '. ' + x);
+})
+//不产生任何输出
+```
+
+如果某个位置是undefined，遍历时就不会被跳过。
+
+```js
+var a = [undefined, undefined, undefined];
+
+a.forEach(function (x, i) {
+  console.log(i + '. ' + x);
+});
+// 0. undefined
+// 1. undefined
+// 2. undefined
+```
 
 ## 实用的数组方法
 
@@ -144,3 +168,23 @@ myArray.push('Cardiff');
 如果要删除最后一个元素，可以用`myArray.pop();`
 
 `unshift()`和`shift()`作用和前面两个方法相同，不过作用于数组的开头。
+
+## 类似数组的对象
+
+如果一个对象的所有键名都是正整数和零，并且具有length属性，那么这个对在语法上称为“类似数组的对象”（array-like object）。
+
+```js
+var obj = {
+  0: 'a',
+  1: 'b',
+  2: 'c',
+  length: 3
+};
+
+obj[0] //a
+obj[1] //b
+obj.length //3
+obj.push('d') //TypeError: obj.push is not a function
+```
+
+类似数组的对象不是数组，对象obj没有数组的push方法，就会报错。
